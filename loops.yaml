@@ -1,0 +1,11 @@
+---
+- hosts: all
+  become: yes
+  tasks:
+    - name: install php modules
+      yum:
+        name: "{{ items }}"
+        state: present
+      loop:
+        - php
+        - php-mysqlnd

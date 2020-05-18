@@ -1,0 +1,13 @@
+---
+# tasks for SBKPROJECT
+- name: Install httpd Prackage
+  yum: 
+   name={{package-name}}
+   state=latest
+  notify:
+  - restart apache
+- name: Start and Enable httpd service
+  service:
+    name=httpd
+    state=restarted
+    enabled=yes

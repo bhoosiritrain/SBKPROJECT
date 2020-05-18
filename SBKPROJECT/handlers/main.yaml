@@ -1,0 +1,7 @@
+---
+# handlers file for SBKPROJECT
+- name: restarted apache
+  service:
+    name=httpd
+    state=restarted
+
